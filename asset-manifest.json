@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tripletriad/static/css/main.14507795.chunk.css",
-    "main.js": "/tripletriad/static/js/main.43ca456e.chunk.js",
-    "main.js.map": "/tripletriad/static/js/main.43ca456e.chunk.js.map",
+    "main.js": "/tripletriad/static/js/main.697c46c4.chunk.js",
+    "main.js.map": "/tripletriad/static/js/main.697c46c4.chunk.js.map",
     "runtime-main.js": "/tripletriad/static/js/runtime-main.ecb8967a.js",
     "runtime-main.js.map": "/tripletriad/static/js/runtime-main.ecb8967a.js.map",
-    "static/js/2.be078c0e.chunk.js": "/tripletriad/static/js/2.be078c0e.chunk.js",
-    "static/js/2.be078c0e.chunk.js.map": "/tripletriad/static/js/2.be078c0e.chunk.js.map",
+    "static/js/2.b7c1c032.chunk.js": "/tripletriad/static/js/2.b7c1c032.chunk.js",
+    "static/js/2.b7c1c032.chunk.js.map": "/tripletriad/static/js/2.b7c1c032.chunk.js.map",
     "index.html": "/tripletriad/index.html",
     "static/css/main.14507795.chunk.css.map": "/tripletriad/static/css/main.14507795.chunk.css.map",
-    "static/js/2.be078c0e.chunk.js.LICENSE.txt": "/tripletriad/static/js/2.be078c0e.chunk.js.LICENSE.txt",
+    "static/js/2.b7c1c032.chunk.js.LICENSE.txt": "/tripletriad/static/js/2.b7c1c032.chunk.js.LICENSE.txt",
     "static/media/FFVIII_logo.7b8ebe41.png": "/tripletriad/static/media/FFVIII_logo.7b8ebe41.png",
     "static/media/balamb.457f2631.mp3": "/tripletriad/static/media/balamb.457f2631.mp3",
     "static/media/capture.f1e395e0.mp3": "/tripletriad/static/media/capture.f1e395e0.mp3",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ecb8967a.js",
-    "static/js/2.be078c0e.chunk.js",
+    "static/js/2.b7c1c032.chunk.js",
     "static/css/main.14507795.chunk.css",
-    "static/js/main.43ca456e.chunk.js"
+    "static/js/main.697c46c4.chunk.js"
   ]
 }
