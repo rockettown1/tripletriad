@@ -7,7 +7,7 @@ NOTE: This is just client-side code only (non of your data will be persisted, if
 
 Also, if you're familiar with FF8 - it only has the basic Open rule as of yet.
 
-[Play it here](https://rockettown1.github.io/BasicHangman/)
+[Play it here](https://rockettown1.github.io/tripletriad/)
 
 ## RULES:
 
