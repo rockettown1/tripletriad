@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/tripletriad/static/css/main.14507795.chunk.css",
+    "main.js": "/tripletriad/static/js/main.43ca456e.chunk.js",
+    "main.js.map": "/tripletriad/static/js/main.43ca456e.chunk.js.map",
+    "runtime-main.js": "/tripletriad/static/js/runtime-main.ecb8967a.js",
+    "runtime-main.js.map": "/tripletriad/static/js/runtime-main.ecb8967a.js.map",
+    "static/js/2.be078c0e.chunk.js": "/tripletriad/static/js/2.be078c0e.chunk.js",
+    "static/js/2.be078c0e.chunk.js.map": "/tripletriad/static/js/2.be078c0e.chunk.js.map",
+    "index.html": "/tripletriad/index.html",
+    "static/css/main.14507795.chunk.css.map": "/tripletriad/static/css/main.14507795.chunk.css.map",
+    "static/js/2.be078c0e.chunk.js.LICENSE.txt": "/tripletriad/static/js/2.be078c0e.chunk.js.LICENSE.txt",
+    "static/media/FFVIII_logo.7b8ebe41.png": "/tripletriad/static/media/FFVIII_logo.7b8ebe41.png",
+    "static/media/balamb.457f2631.mp3": "/tripletriad/static/media/balamb.457f2631.mp3",
+    "static/media/capture.f1e395e0.mp3": "/tripletriad/static/media/capture.f1e395e0.mp3",
+    "static/media/card-board.987826cb.png": "/tripletriad/static/media/card-board.987826cb.png",
+    "static/media/card.a1107c40.mp3": "/tripletriad/static/media/card.a1107c40.mp3",
+    "static/media/fanfare.d44a0930.mp3": "/tripletriad/static/media/fanfare.d44a0930.mp3",
+    "static/media/shuffle.9a87650b.mp3": "/tripletriad/static/media/shuffle.9a87650b.mp3",
+    "static/media/start.baacef6d.mp3": "/tripletriad/static/media/start.baacef6d.mp3",
+    "static/media/triangle.76e2c707.png": "/tripletriad/static/media/triangle.76e2c707.png",
+    "static/media/tripletriad.b40194a9.png": "/tripletriad/static/media/tripletriad.b40194a9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ecb8967a.js",
+    "static/js/2.be078c0e.chunk.js",
+    "static/css/main.14507795.chunk.css",
+    "static/js/main.43ca456e.chunk.js"
+  ]
+}
