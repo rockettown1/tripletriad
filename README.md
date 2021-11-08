@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Triple Triad
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### (Card game from Final Fantasy 8)
 
-## Available Scripts
+Just for fun weekend project (working but unfinished)  
+NOTE: This is just client-side code only (non of your data will be persisted, if you win cards for example) So refresh the page and all will be lost. I've still got to write the cpu algorithm so you'll have to also control the second player yourself if you want to have a mess around with it now.
 
-In the project directory, you can run:
+Also, if you're familiar with FF8 - it only has the basic Open rule as of yet.
 
-### `npm start`
+[Play it here](https://rockettown1.github.io/BasicHangman/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## RULES:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. You have a collection of cards (at least 5, but could be loads)
+2. You select 5 cards from your collection to battle, and so does your opponent.
+3. You take it in turns to place your cards on the Triple Triad board.
+4. Each card has 4 stats (top, left, bottom, right)
+5. If a player puts down a card with a better stat to those adjacent, that player wins that/those cards.
+6. The player who owns the most cards when the board is full is the winner.
+7. The winning player may then take a card from their opponent.
+8. You can then play another round.
 
-### `npm test`
+If a player has less than 5 cards in their collection (the min number to play, the game is over and you've lost!) In this app, player 1 is the main player, so the game ends when player 1 can no longer play a round.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Todo
 
-### `npm run build`
+- [ ] Write the CPU algorithm
+- [ ] Online multiplayer
+- [ ] Add styling
+- [ ] Add a server to store current card deck and any cards won/lost
+- [ ] Additional region rules from Final Fantasy 8
+- [ ] Add testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Known bugs/issues
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Due to browser security differences, Safari might have some issues with playing music.
+This app was just for fun/practice and HAS NOT been adequately tested in any way.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+#### Credits
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Thanks Andy for suggesting the challenge, providing the card images and the json stats file. This one was definitely an interesting one.

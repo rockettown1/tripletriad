@@ -1,0 +1,1094 @@
+{
+  "Cards": [
+    {
+      "name": "Geezard",
+      "level": 1,
+      "image": "TTGeezard.png",
+      "topStat": 1,
+      "rightStat": 4,
+      "bottomStat": 1,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Funguar",
+      "level": 1,
+      "image": "TTFunguar.png",
+      "topStat": 5,
+      "rightStat": 1,
+      "bottomStat": 1,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Bite Bug",
+      "level": 1,
+      "image": "TTBiteBug.png",
+      "topStat": 1,
+      "rightStat": 3,
+      "bottomStat": 3,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Red Bat",
+      "level": 1,
+      "image": "TTRedBat.png",
+      "topStat": 6,
+      "rightStat": 1,
+      "bottomStat": 1,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Blobra",
+      "level": 1,
+      "image": "TTBlobra.png",
+      "topStat": 2,
+      "rightStat": 3,
+      "bottomStat": 1,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Gayla",
+      "level": 1,
+      "image": "TTGayla.png",
+      "topStat": 2,
+      "rightStat": 1,
+      "bottomStat": 4,
+      "leftStat": 4,
+      "element": "Lightning"
+    },
+    {
+      "name": "Gesper",
+      "level": 1,
+      "image": "TTGesper.png",
+      "topStat": 1,
+      "rightStat": 5,
+      "bottomStat": 4,
+      "leftStat": 1,
+      "element": "none"
+    },
+    {
+      "name": "Fastitocalon-F",
+      "level": 1,
+      "image": "TTFastitocalonF.png",
+      "topStat": 3,
+      "rightStat": 5,
+      "bottomStat": 2,
+      "leftStat": 1,
+      "element": "Stone"
+    },
+    {
+      "name": "Blood Soul",
+      "level": 1,
+      "image": "TTBloodSoul.png",
+      "topStat": 2,
+      "rightStat": 1,
+      "bottomStat": 6,
+      "leftStat": 1,
+      "element": "none"
+    },
+    {
+      "name": "Caterchipillar",
+      "level": 1,
+      "image": "TTCaterchipillar.png",
+      "topStat": 4,
+      "rightStat": 2,
+      "bottomStat": 4,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Cockertrice",
+      "level": 1,
+      "image": "TTCockatrice.png",
+      "topStat": 2,
+      "rightStat": 1,
+      "bottomStat": 2,
+      "leftStat": 6,
+      "element": "Lightning"
+    },
+    {
+      "name": "Grat",
+      "level": 2,
+      "image": "TTGrat.png",
+      "topStat": 7,
+      "rightStat": 1,
+      "bottomStat": 3,
+      "leftStat": 1,
+      "element": "none"
+    },
+    {
+      "name": "Buel",
+      "level": 2,
+      "image": "TTBuel.png",
+      "topStat": 6,
+      "rightStat": 2,
+      "bottomStat": 2,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Mesmerize",
+      "level": 2,
+      "image": "TTMesmerize.png",
+      "topStat": 5,
+      "rightStat": 3,
+      "bottomStat": 3,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Glacial Eye",
+      "level": 2,
+      "image": "TTGlacialEye.png",
+      "topStat": 6,
+      "rightStat": 1,
+      "bottomStat": 4,
+      "leftStat": 3,
+      "element": "Ice"
+    },
+    {
+      "name": "Belhelmel",
+      "level": 2,
+      "image": "TTBelhelmel.png",
+      "topStat": 3,
+      "rightStat": 4,
+      "bottomStat": 5,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Thrustaevis",
+      "level": 2,
+      "image": "TTThrustaevis.png",
+      "topStat": 5,
+      "rightStat": 3,
+      "bottomStat": 2,
+      "leftStat": 5,
+      "element": "Wind"
+    },
+    {
+      "name": "Anacondaur",
+      "level": 2,
+      "image": "TTAnacondaur.png",
+      "topStat": 5,
+      "rightStat": 1,
+      "bottomStat": 3,
+      "leftStat": 5,
+      "element": "Poison"
+    },
+    {
+      "name": "Creeps",
+      "level": 2,
+      "image": "TTCreeps.png",
+      "topStat": 5,
+      "rightStat": 2,
+      "bottomStat": 5,
+      "leftStat": 2,
+      "element": "Lightning"
+    },
+    {
+      "name": "Grendel",
+      "level": 2,
+      "image": "TTGrendel.png",
+      "topStat": 4,
+      "rightStat": 4,
+      "bottomStat": 5,
+      "leftStat": 2,
+      "element": "Lightning"
+    },
+    {
+      "name": "Jelleye",
+      "level": 2,
+      "image": "TTJelleye.png",
+      "topStat": 3,
+      "rightStat": 2,
+      "bottomStat": 1,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Grand Mantis",
+      "level": 2,
+      "image": "TTGrandMantis.png",
+      "topStat": 5,
+      "rightStat": 2,
+      "bottomStat": 5,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Forbidden",
+      "level": 3,
+      "image": "TTForbidden.png",
+      "topStat": 6,
+      "rightStat": 6,
+      "bottomStat": 3,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Armadodo",
+      "level": 3,
+      "image": "TTArmadodo.png",
+      "topStat": 6,
+      "rightStat": 3,
+      "bottomStat": 1,
+      "leftStat": 6,
+      "element": "Stone"
+    },
+    {
+      "name": "Tri-Face",
+      "level": 3,
+      "image": "TTTriFace.png",
+      "topStat": 3,
+      "rightStat": 5,
+      "bottomStat": 5,
+      "leftStat": 5,
+      "element": "Poison"
+    },
+    {
+      "name": "Fastitocalon",
+      "level": 3,
+      "image": "TTFastitocalon.png",
+      "topStat": 7,
+      "rightStat": 5,
+      "bottomStat": 1,
+      "leftStat": 3,
+      "element": "Stone"
+    },
+    {
+      "name": "Snow Lion",
+      "level": 3,
+      "image": "TTSnowLion.png",
+      "topStat": 7,
+      "rightStat": 1,
+      "bottomStat": 5,
+      "leftStat": 3,
+      "element": "Ice"
+    },
+    {
+      "name": "Ochu",
+      "level": 3,
+      "image": "TTOchu.png",
+      "topStat": 5,
+      "rightStat": 6,
+      "bottomStat": 3,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "SAM08G",
+      "level": 3,
+      "image": "TTSAM08G.png",
+      "topStat": 5,
+      "rightStat": 6,
+      "bottomStat": 2,
+      "leftStat": 4,
+      "element": "Fire"
+    },
+    {
+      "name": "Death Claw",
+      "level": 3,
+      "image": "TTDeathClaw.png",
+      "topStat": 4,
+      "rightStat": 4,
+      "bottomStat": 7,
+      "leftStat": 2,
+      "element": "Fire"
+    },
+    {
+      "name": "Cactuar",
+      "level": 3,
+      "image": "TTCactuar.png",
+      "topStat": 6,
+      "rightStat": 2,
+      "bottomStat": 6,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Tonberry",
+      "level": 3,
+      "image": "TTTonberry.png",
+      "topStat": 3,
+      "rightStat": 6,
+      "bottomStat": 4,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Abyss Worm",
+      "level": 3,
+      "image": "TTAbyssWorm.png",
+      "topStat": 7,
+      "rightStat": 2,
+      "bottomStat": 3,
+      "leftStat": 5,
+      "element": "Stone"
+    },
+    {
+      "name": "Turtapod",
+      "level": 4,
+      "image": "TTTurtapod.png",
+      "topStat": 2,
+      "rightStat": 3,
+      "bottomStat": 6,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Vysage",
+      "level": 4,
+      "image": "TTVysage.png",
+      "topStat": 6,
+      "rightStat": 5,
+      "bottomStat": 4,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "T-Rexaur",
+      "level": 4,
+      "image": "TTTRexaur.png",
+      "topStat": 4,
+      "rightStat": 6,
+      "bottomStat": 2,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Bomb",
+      "level": 4,
+      "image": "TTBomb.png",
+      "topStat": 2,
+      "rightStat": 7,
+      "bottomStat": 6,
+      "leftStat": 3,
+      "element": "Fire"
+    },
+    {
+      "name": "Blitz",
+      "level": 4,
+      "image": "TTBlitz.png",
+      "topStat": 1,
+      "rightStat": 6,
+      "bottomStat": 4,
+      "leftStat": 7,
+      "element": "Lightning"
+    },
+    {
+      "name": "Wendigo",
+      "level": 4,
+      "image": "TTWendigo.png",
+      "topStat": 7,
+      "rightStat": 3,
+      "bottomStat": 1,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Torama",
+      "level": 4,
+      "image": "TTTorama.png",
+      "topStat": 7,
+      "rightStat": 4,
+      "bottomStat": 4,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Imp",
+      "level": 4,
+      "image": "TTImp.png",
+      "topStat": 3,
+      "rightStat": 7,
+      "bottomStat": 3,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Blue Dragon",
+      "level": 4,
+      "image": "TTBlueDragon.png",
+      "topStat": 6,
+      "rightStat": 2,
+      "bottomStat": 7,
+      "leftStat": 3,
+      "element": "Poison"
+    },
+    {
+      "name": "Adamantoise",
+      "level": 4,
+      "image": "TTAdamantoise.png",
+      "topStat": 4,
+      "rightStat": 5,
+      "bottomStat": 5,
+      "leftStat": 6,
+      "element": "Stone"
+    },
+    {
+      "name": "Hexadragon",
+      "level": 4,
+      "image": "TTHexadragon.png",
+      "topStat": 7,
+      "rightStat": 5,
+      "bottomStat": 4,
+      "leftStat": 3,
+      "element": "Fire"
+    },
+    {
+      "name": "Iron Giant",
+      "level": 5,
+      "image": "TTIronGiant.png",
+      "topStat": 6,
+      "rightStat": 5,
+      "bottomStat": 6,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Behemoth",
+      "level": 5,
+      "image": "TTBehemoth.png",
+      "topStat": 3,
+      "rightStat": 6,
+      "bottomStat": 5,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Chimera",
+      "level": 5,
+      "image": "TTChimera.png",
+      "topStat": 7,
+      "rightStat": 6,
+      "bottomStat": 5,
+      "leftStat": 3,
+      "element": "Water"
+    },
+    {
+      "name": "PuPu",
+      "level": 5,
+      "image": "TTPuPu.png",
+      "topStat": 3,
+      "rightStat": 10,
+      "bottomStat": 2,
+      "leftStat": 1,
+      "element": "none"
+    },
+    {
+      "name": "Elastoid",
+      "level": 5,
+      "image": "TTElastoid.png",
+      "topStat": 6,
+      "rightStat": 2,
+      "bottomStat": 6,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "GIM47N",
+      "level": 5,
+      "image": "TTGIM47N.png",
+      "topStat": 5,
+      "rightStat": 5,
+      "bottomStat": 7,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Malboro",
+      "level": 5,
+      "image": "TTMalboro.png",
+      "topStat": 7,
+      "rightStat": 7,
+      "bottomStat": 4,
+      "leftStat": 2,
+      "element": "Poison"
+    },
+    {
+      "name": "Ruby Dragon",
+      "level": 5,
+      "image": "TTRubyDragon.png",
+      "topStat": 7,
+      "rightStat": 2,
+      "bottomStat": 7,
+      "leftStat": 4,
+      "element": "Fire"
+    },
+    {
+      "name": "Elnoyle",
+      "level": 5,
+      "image": "TTElnoyle.png",
+      "topStat": 5,
+      "rightStat": 3,
+      "bottomStat": 7,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Tonberry King",
+      "level": 5,
+      "image": "TTTonberryKing.png",
+      "topStat": 4,
+      "rightStat": 6,
+      "bottomStat": 7,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Wedge, Biggs",
+      "level": 5,
+      "image": "TTBiggsWedge.png",
+      "topStat": 6,
+      "rightStat": 6,
+      "bottomStat": 2,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Fujin, Raijin",
+      "level": 6,
+      "image": "TTFujinRaijin.png",
+      "topStat": 2,
+      "rightStat": 8,
+      "bottomStat": 8,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Elvoret",
+      "level": 6,
+      "image": "TTElvoret.png",
+      "topStat": 7,
+      "rightStat": 8,
+      "bottomStat": 3,
+      "leftStat": 4,
+      "element": "Wind"
+    },
+    {
+      "name": "X-ATM092",
+      "level": 6,
+      "image": "TTX-ATM092.png",
+      "topStat": 4,
+      "rightStat": 8,
+      "bottomStat": 7,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Granaldo",
+      "level": 6,
+      "image": "TTGranaldo.png",
+      "topStat": 7,
+      "rightStat": 2,
+      "bottomStat": 8,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Gerogero",
+      "level": 6,
+      "image": "TTGerogero.png",
+      "topStat": 1,
+      "rightStat": 8,
+      "bottomStat": 8,
+      "leftStat": 3,
+      "element": "Poison"
+    },
+    {
+      "name": "Iguion",
+      "level": 6,
+      "image": "TTIguion.png",
+      "topStat": 8,
+      "rightStat": 2,
+      "bottomStat": 8,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Abadon",
+      "level": 6,
+      "image": "TTAbadon.png",
+      "topStat": 6,
+      "rightStat": 8,
+      "bottomStat": 4,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Trauma",
+      "level": 6,
+      "image": "TTTrauma.png",
+      "topStat": 4,
+      "rightStat": 8,
+      "bottomStat": 5,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Oilboyle",
+      "level": 6,
+      "image": "TTOilboyle.png",
+      "topStat": 1,
+      "rightStat": 8,
+      "bottomStat": 4,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Shumi Tribe",
+      "level": 6,
+      "image": "TTNORG.png",
+      "topStat": 6,
+      "rightStat": 5,
+      "bottomStat": 8,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Krysta",
+      "level": 6,
+      "image": "TTKrysta.png",
+      "topStat": 7,
+      "rightStat": 5,
+      "bottomStat": 8,
+      "leftStat": 1,
+      "element": "none"
+    },
+    {
+      "name": "Propagator",
+      "level": 7,
+      "image": "TTPropagator.png",
+      "topStat": 8,
+      "rightStat": 4,
+      "bottomStat": 4,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Jumbo Cactuar",
+      "level": 7,
+      "image": "TTJumboCactuar.png",
+      "topStat": 8,
+      "rightStat": 8,
+      "bottomStat": 4,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Tri-Point",
+      "level": 7,
+      "image": "TTTriPoint.png",
+      "topStat": 8,
+      "rightStat": 5,
+      "bottomStat": 2,
+      "leftStat": 8,
+      "element": "Lightning"
+    },
+    {
+      "name": "Gargantua",
+      "level": 7,
+      "image": "TTGargantua.png",
+      "topStat": 5,
+      "rightStat": 6,
+      "bottomStat": 6,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Mobile Type 8",
+      "level": 7,
+      "image": "TTMobileType8.png",
+      "topStat": 8,
+      "rightStat": 6,
+      "bottomStat": 7,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Sphinxara",
+      "level": 7,
+      "image": "TTSphinxara.png",
+      "topStat": 8,
+      "rightStat": 3,
+      "bottomStat": 5,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Tiamat",
+      "level": 7,
+      "image": "TTTiamat.png",
+      "topStat": 8,
+      "rightStat": 8,
+      "bottomStat": 5,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "BGH251F2",
+      "level": 7,
+      "image": "TTBGH251F2.png",
+      "topStat": 5,
+      "rightStat": 7,
+      "bottomStat": 8,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Red Giant",
+      "level": 7,
+      "image": "TTRedGiant.png",
+      "topStat": 6,
+      "rightStat": 8,
+      "bottomStat": 4,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Catoblepas",
+      "level": 7,
+      "image": "TTCatoblepas.png",
+      "topStat": 1,
+      "rightStat": 8,
+      "bottomStat": 7,
+      "leftStat": 7,
+      "element": "none"
+    },
+    {
+      "name": "Ultima Weapon",
+      "level": 7,
+      "image": "TTUltimaWeapon.png",
+      "topStat": 7,
+      "rightStat": 7,
+      "bottomStat": 2,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Angelo",
+      "level": 8,
+      "image": "TTAngelo.png",
+      "topStat": 9,
+      "rightStat": 6,
+      "bottomStat": 7,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Gilgamesh",
+      "level": 8,
+      "image": "TTGilgamesh.png",
+      "topStat": 3,
+      "rightStat": 7,
+      "bottomStat": 9,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "MiniMog",
+      "level": 8,
+      "image": "TTMiniMog.png",
+      "topStat": 9,
+      "rightStat": 3,
+      "bottomStat": 9,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Chicobo",
+      "level": 8,
+      "image": "TTChocobo.png",
+      "topStat": 9,
+      "rightStat": 4,
+      "bottomStat": 8,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Quezacotl",
+      "level": 8,
+      "image": "TTQuezacotl.png",
+      "topStat": 2,
+      "rightStat": 9,
+      "bottomStat": 9,
+      "leftStat": 4,
+      "element": "Lightning"
+    },
+    {
+      "name": "Shiva",
+      "level": 8,
+      "image": "TTShiva.png",
+      "topStat": 6,
+      "rightStat": 7,
+      "bottomStat": 4,
+      "leftStat": 9,
+      "element": "Ice"
+    },
+    {
+      "name": "Ifrit",
+      "level": 8,
+      "image": "TTIfrit.png",
+      "topStat": 9,
+      "rightStat": 6,
+      "bottomStat": 2,
+      "leftStat": 8,
+      "element": "Fire"
+    },
+    {
+      "name": "Siren",
+      "level": 8,
+      "image": "TTSiren.png",
+      "topStat": 8,
+      "rightStat": 9,
+      "bottomStat": 6,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Sacred",
+      "level": 8,
+      "image": "TTSacred.png",
+      "topStat": 5,
+      "rightStat": 1,
+      "bottomStat": 9,
+      "leftStat": 9,
+      "element": "Stone"
+    },
+    {
+      "name": "Minotaur",
+      "level": 8,
+      "image": "TTMinotaur.png",
+      "topStat": 9,
+      "rightStat": 5,
+      "bottomStat": 2,
+      "leftStat": 9,
+      "element": "Stone"
+    },
+    {
+      "name": "Carbuncle",
+      "level": 9,
+      "image": "TTCarbuncle.png",
+      "topStat": 8,
+      "rightStat": 4,
+      "bottomStat": 10,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Diablos",
+      "level": 9,
+      "image": "TTDiablos.png",
+      "topStat": 5,
+      "rightStat": 10,
+      "bottomStat": 8,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Leviathan",
+      "level": 9,
+      "image": "TTLeviathan.png",
+      "topStat": 7,
+      "rightStat": 10,
+      "bottomStat": 1,
+      "leftStat": 7,
+      "element": "Water"
+    },
+    {
+      "name": "Odin",
+      "level": 9,
+      "image": "TTOdin.png",
+      "topStat": 8,
+      "rightStat": 10,
+      "bottomStat": 3,
+      "leftStat": 5,
+      "element": "none"
+    },
+    {
+      "name": "Pandemona",
+      "level": 9,
+      "image": "TTPandemona.png",
+      "topStat": 10,
+      "rightStat": 1,
+      "bottomStat": 7,
+      "leftStat": 7,
+      "element": "Wind"
+    },
+    {
+      "name": "Cerberus",
+      "level": 9,
+      "image": "TTCerberus.png",
+      "topStat": 7,
+      "rightStat": 4,
+      "bottomStat": 6,
+      "leftStat": 10,
+      "element": "none"
+    },
+    {
+      "name": "Alexander",
+      "level": 9,
+      "image": "TTAlexander.png",
+      "topStat": 9,
+      "rightStat": 10,
+      "bottomStat": 4,
+      "leftStat": 2,
+      "element": "Holy"
+    },
+    {
+      "name": "Phoenix",
+      "level": 9,
+      "image": "TTPhoenix.png",
+      "topStat": 7,
+      "rightStat": 2,
+      "bottomStat": 7,
+      "leftStat": 10,
+      "element": "Fire"
+    },
+    {
+      "name": "Bahamut",
+      "level": 9,
+      "image": "TTBahamut.png",
+      "topStat": 10,
+      "rightStat": 8,
+      "bottomStat": 2,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Doomtrain",
+      "level": 9,
+      "image": "TTDoomtrain.png",
+      "topStat": 3,
+      "rightStat": 1,
+      "bottomStat": 10,
+      "leftStat": 10,
+      "element": "Poison"
+    },
+    {
+      "name": "Eden",
+      "level": 9,
+      "image": "TTEden.png",
+      "topStat": 4,
+      "rightStat": 4,
+      "bottomStat": 9,
+      "leftStat": 10,
+      "element": "none"
+    },
+    {
+      "name": "Ward",
+      "level": 10,
+      "image": "TTWard.png",
+      "topStat": 10,
+      "rightStat": 7,
+      "bottomStat": 2,
+      "leftStat": 8,
+      "element": "none"
+    },
+    {
+      "name": "Kiros",
+      "level": 10,
+      "image": "TTKiros.png",
+      "topStat": 6,
+      "rightStat": 7,
+      "bottomStat": 6,
+      "leftStat": 10,
+      "element": "none"
+    },
+    {
+      "name": "Laguna",
+      "level": 10,
+      "image": "TTLaguna.png",
+      "topStat": 5,
+      "rightStat": 10,
+      "bottomStat": 3,
+      "leftStat": 9,
+      "element": "none"
+    },
+    {
+      "name": "Selphie",
+      "level": 10,
+      "image": "TTSelphie.png",
+      "topStat": 10,
+      "rightStat": 8,
+      "bottomStat": 6,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Quistis",
+      "level": 10,
+      "image": "TTQuistis.png",
+      "topStat": 9,
+      "rightStat": 6,
+      "bottomStat": 10,
+      "leftStat": 2,
+      "element": "none"
+    },
+    {
+      "name": "Irvine",
+      "level": 10,
+      "image": "TTIrvine.png",
+      "topStat": 2,
+      "rightStat": 6,
+      "bottomStat": 9,
+      "leftStat": 10,
+      "element": "none"
+    },
+    {
+      "name": "Zell",
+      "level": 10,
+      "image": "TTZell.png",
+      "topStat": 8,
+      "rightStat": 5,
+      "bottomStat": 10,
+      "leftStat": 6,
+      "element": "none"
+    },
+    {
+      "name": "Rinoa",
+      "level": 10,
+      "image": "TTRinoa.png",
+      "topStat": 4,
+      "rightStat": 10,
+      "bottomStat": 2,
+      "leftStat": 10,
+      "element": "none"
+    },
+    {
+      "name": "Edea",
+      "level": 10,
+      "image": "TTEdea.png",
+      "topStat": 10,
+      "rightStat": 10,
+      "bottomStat": 3,
+      "leftStat": 3,
+      "element": "none"
+    },
+    {
+      "name": "Seifer",
+      "level": 10,
+      "image": "TTSeifer.png",
+      "topStat": 6,
+      "rightStat": 9,
+      "bottomStat": 10,
+      "leftStat": 4,
+      "element": "none"
+    },
+    {
+      "name": "Squall",
+      "level": 10,
+      "image": "TTSquall.png",
+      "topStat": 10,
+      "rightStat": 4,
+      "bottomStat": 6,
+      "leftStat": 9,
+      "element": "none"
+    }
+  ]
+}

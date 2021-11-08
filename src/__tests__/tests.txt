@@ -1,0 +1,3 @@
+If you are a good engineer, unlike me, you would have written unit/integration/e2e tests and put them in this folder.
+
+Remember to always write your tests. Don't be like me.
