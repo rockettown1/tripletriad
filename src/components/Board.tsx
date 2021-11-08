@@ -107,7 +107,6 @@ const Board = ({
   }, [endGame]);
 
   const setCellValue = (row: number, index: number) => {
-    console.log(`You clicked on row: ${row} and cell: ${index}`);
     if (currentCard !== null) {
       const gameBoard = [...board];
       if (gameBoard[row][index] === null) {
@@ -146,7 +145,7 @@ const Board = ({
       }
     }
   };
-  console.log(`${currentPlayer} starts`);
+
   return (
     <Container>
       <BackgroundImage src={boardBackground} />

@@ -93,7 +93,7 @@ const Game = ({
         count++;
       }
     }
-    console.log({ player: count, opponent: 10 - count });
+
     setCount({ player: count, opponent: 10 - count });
     //winLogic returns game status and a message, and cardCount is passing that on
     return winLogic(board, { player: count, opponent: 10 - count }, playMusic);

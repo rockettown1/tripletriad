@@ -80,8 +80,7 @@ export const removeCardAfterPlaying = (
   } catch (error) {
     console.log(error);
   }
-  console.log(arrCopy);
-  console.log(cardIndex);
+
   arrCopy[cardIndex].available = false;
   setter(arrCopy);
 };

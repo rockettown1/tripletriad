@@ -44,7 +44,7 @@ function App() {
     setOppsCards(opps);
     //select 5 from starting 10
     const allCards = [...yourCards];
-    console.log("YourCards", yourCards);
+
     allCards[index].player = "player1";
 
     //resetting incase they've been animated in the past
@@ -68,12 +68,6 @@ function App() {
     //update your cards with the ones you've selected to play with.
     setYourCards(allCards);
   };
-
-  console.log("preferences", {
-    player2: opponent,
-    music: playMusic,
-    sounds: playSounds,
-  });
 
   return (
     <Container>
