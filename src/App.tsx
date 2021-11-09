@@ -9,6 +9,7 @@ import WinnersChoice from "./components/WinnersChoice";
 import { startingCards, Card } from "./utils/";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useWindowSize } from "./utils/useWindowSize";
+import backgroundImage from "./assets/images/other/card-board.png";
 
 export type Status = {
   status: boolean;
@@ -140,6 +141,7 @@ function App() {
           }
         />
       </Routes>
+      <img src={backgroundImage} style={{ display: "none" }} alt="hidden" />
     </Container>
   );
 }
