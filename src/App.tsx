@@ -8,6 +8,7 @@ import Game from "./components/Game";
 import WinnersChoice from "./components/WinnersChoice";
 import { startingCards, Card } from "./utils/";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { useWindowSize } from "./utils/useWindowSize";
 
 export type Status = {
   status: boolean;
@@ -25,6 +26,7 @@ function App() {
   const [status, setStatus] = useState<Status | null>(null);
   let navigate = useNavigate();
   let { pathname } = useLocation();
+  let { width } = useWindowSize();
 
   useEffect(() => {
     navigate("/");
@@ -69,7 +71,11 @@ function App() {
     setYourCards(allCards);
   };
 
-  return (
+  return width! < 1000 ? (
+    <Container>
+      <h1>You need to play this on a bigger screen.</h1>
+    </Container>
+  ) : (
     <Container>
       {pathname !== "/" && (
         <Mute
