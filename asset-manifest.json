@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tripletriad/static/css/main.14507795.chunk.css",
-    "main.js": "/tripletriad/static/js/main.4ed057f0.chunk.js",
-    "main.js.map": "/tripletriad/static/js/main.4ed057f0.chunk.js.map",
+    "main.js": "/tripletriad/static/js/main.459c4d93.chunk.js",
+    "main.js.map": "/tripletriad/static/js/main.459c4d93.chunk.js.map",
     "runtime-main.js": "/tripletriad/static/js/runtime-main.ecb8967a.js",
     "runtime-main.js.map": "/tripletriad/static/js/runtime-main.ecb8967a.js.map",
     "static/js/2.b7c1c032.chunk.js": "/tripletriad/static/js/2.b7c1c032.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.ecb8967a.js",
     "static/js/2.b7c1c032.chunk.js",
     "static/css/main.14507795.chunk.css",
-    "static/js/main.4ed057f0.chunk.js"
+    "static/js/main.459c4d93.chunk.js"
   ]
 }
