@@ -10,6 +10,8 @@ import { startingCards, Card } from "./utils/";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useWindowSize } from "./utils/useWindowSize";
 import backgroundImage from "./assets/images/other/card-board.png";
+import ff8 from "./assets/images/other/FFVIII_logo.png";
+import tt from "./assets/images/other/tripletriad.png";
 
 export type Status = {
   status: boolean;
@@ -150,7 +152,10 @@ function App() {
           }
         />
       </Routes>
+      {/* Dirty hacker */}
       <img src={backgroundImage} style={{ display: "none" }} alt="hidden" />
+      <img src={ff8} style={{ display: "none" }} alt="hidden" />
+      <img src={tt} style={{ display: "none" }} alt="hidden" />
     </Container>
   );
 }
