@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Card } from "../utils";
 import { images } from "../assets/images";
 import { useNavigate } from "react-router-dom";
+import { Status } from "../App";
 
 type LandingProps = {
   allCards: Card[];
@@ -11,6 +12,7 @@ type LandingProps = {
   selection: Card[];
   setSelection: React.Dispatch<React.SetStateAction<Card[]>>;
   setSelectedCount: React.Dispatch<React.SetStateAction<number>>;
+  setStatus: React.Dispatch<React.SetStateAction<Status>>;
 };
 
 const Selection = ({
@@ -20,6 +22,7 @@ const Selection = ({
   selectPlayable,
   selection,
   setSelection,
+  setStatus,
 }: LandingProps) => {
   let navigate = useNavigate();
 
@@ -29,13 +32,12 @@ const Selection = ({
       card.selected = false;
       card.player = "player1";
       card.available = true;
+      card.picked = false;
     }
     setSelection([]);
     setSelectedCount(0);
     if (allCards.length < 5) {
-      alert(
-        "You don't have enough cards to play! Refresh the page to start again. This is a work in progress and a better UI for this will be added eventually"
-      );
+      navigate("/");
     }
   }, []);
 
@@ -48,7 +50,7 @@ const Selection = ({
       }
     }
     setSelection(temp);
-
+    setStatus({ status: false, details: { winner: "", message: "" } });
     navigate("/game");
   };
 

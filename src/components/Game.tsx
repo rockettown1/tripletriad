@@ -1,8 +1,20 @@
 import { useState, useEffect } from "react";
-import { useTrail, animated } from "react-spring";
 import styled from "styled-components";
-import { images } from "../assets/images";
-import { Card, WinLogic, shuffleMusic, mainMusic, fanfare } from "../utils";
+import {
+  checkStats,
+  pickRandomIndex,
+  randomlyPickCell,
+  isFull,
+} from "../utils";
+import {
+  Card,
+  WinLogic,
+  shuffleMusic,
+  mainMusic,
+  fanfare,
+  removeCardAfterPlaying,
+  cardSound,
+} from "../utils";
 import Board from "./Board";
 import CardsContainer from "./CardsContainer";
 import { Status } from "../App";
@@ -16,6 +28,7 @@ type GameProps = {
   playSounds: boolean;
   status: Status;
   setStatus: React.Dispatch<React.SetStateAction<Status | null>>;
+  P2cpu: boolean;
 };
 
 type CountType = {
@@ -32,12 +45,18 @@ const Game = ({
   playSounds,
   status,
   setStatus,
+  P2cpu,
 }: GameProps) => {
   const [playCard, setPlayCard] = useState<Card | null>(null);
   const [hoveredCard, setHoveredCard] = useState<Card | null>(null);
   const [count, setCount] = useState<CountType>({ player: 0, opponent: 0 });
-  const [currentPlayer, setCurrentPlayer] = useState<string>("");
+  const [currentPlayer, setCurrentPlayer] = useState<string>("player1");
   const [showArrow, setShowArrow] = useState<boolean>(true);
+  const [board, setBoard] = useState<(Card | null)[][]>([
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+  ]);
 
   useEffect(() => {
     mainMusic.pause();
@@ -47,26 +66,31 @@ const Game = ({
       shuffleMusic.currentTime = 0;
       shuffleMusic.play();
     }
-  }, []);
-
-  useEffect(() => {
-    if (currentPlayer === "player1") {
-      setShowArrow(true);
-    } else {
-      setShowArrow(false);
+    //initialise hands when game starts
+    const temp1 = [...yourCards];
+    const temp2 = [...oppsCards];
+    for (const card of temp1) {
+      card.picked = false;
     }
-  }, [currentPlayer]);
+    for (const card of temp2) {
+      card.picked = false;
+    }
+
+    setYourCards(temp1);
+    setOppsCards(temp2);
+  }, []);
 
   const updatePicked = (index: number, player: string) => {
     let temp: Card[] = [];
     if (player === "player1") {
       temp = [...yourCards];
+      temp.forEach((card) => {
+        card.picked = false;
+      });
     } else {
       temp = [...oppsCards];
     }
-    temp.forEach((card) => {
-      card.picked = false;
-    });
+
     temp[index].picked = true;
     setPlayCard(temp[index]);
 
@@ -76,6 +100,64 @@ const Game = ({
       setOppsCards(temp);
     }
   };
+
+  const setCellValue = (
+    row: number,
+    index: number,
+    board: (Card | null)[][]
+  ) => {
+    const gameBoard = [...board];
+    if (playCard !== null) {
+      if (gameBoard[row][index] === null) {
+        gameBoard[row][index] = playCard;
+
+        setBoard(gameBoard);
+        if (playSounds) {
+          cardSound.play();
+        }
+        if (currentPlayer === "player1") {
+          setCurrentPlayer("player2");
+        } else {
+          setCurrentPlayer("player1");
+        }
+        //remove card from hand
+        removeCardAfterPlaying(
+          playCard.player === "player1" ? yourCards : oppsCards,
+          playCard,
+          playCard.player === "player1" ? setYourCards : setOppsCards
+        );
+        setPlayCard(null);
+
+        //value checks results handled here
+        checkStats(gameBoard, row, index, setBoard, playSounds);
+      }
+    }
+    return gameBoard;
+  };
+
+  useEffect(() => {
+    if (!isFull(board)) {
+      if (currentPlayer === "player1") {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+        //Handle CPU from here
+        if (P2cpu) {
+          setTimeout(() => {
+            if (showArrow) {
+              let index = pickRandomIndex(oppsCards);
+              setTimeout(() => {
+                updatePicked(index, "player2");
+              }, 500);
+            }
+            let cell = randomlyPickCell(board);
+
+            setCellValue(cell.rr, cell.rc, board);
+          }, 800);
+        }
+      }
+    }
+  }, [currentPlayer, oppsCards]);
 
   type Details = {
     winner: string | undefined;
@@ -108,22 +190,19 @@ const Game = ({
         setHoveredCard={setHoveredCard}
         count={count}
         showArrow={showArrow}
+        P2cpu={P2cpu}
       />
       <Board
-        currentCard={playCard}
-        setCurrentCard={setPlayCard}
-        yourCards={yourCards}
-        oppsCards={oppsCards}
-        setYourCards={setYourCards}
         setOppsCards={setOppsCards}
         hoveredCard={hoveredCard}
         cardCount={cardCount}
-        score={count}
         playSounds={playSounds}
         currentPlayer={currentPlayer}
         setCurrentPlayer={setCurrentPlayer}
         status={status}
         setStatus={setStatus}
+        board={board}
+        setCellValue={setCellValue}
       />
       <CardsContainer
         yourCards={oppsCards}
@@ -132,6 +211,7 @@ const Game = ({
         setHoveredCard={setHoveredCard}
         count={count}
         showArrow={!showArrow}
+        P2cpu={P2cpu}
       />
     </Container>
   );

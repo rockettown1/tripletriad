@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { useTrail, animated } from "react-spring";
 import { images } from "../assets/images";
 import { Card } from "../utils";
@@ -12,6 +12,7 @@ type CardsContainerProps = {
   setHoveredCard: React.Dispatch<React.SetStateAction<Card | null>>;
   count: { player: number; opponent: number };
   showArrow: boolean;
+  P2cpu: boolean;
 };
 
 const CardsContainer = ({
@@ -21,6 +22,7 @@ const CardsContainer = ({
   setHoveredCard,
   count,
   showArrow,
+  P2cpu,
 }: CardsContainerProps) => {
   const [delay, setDelay] = useState(false);
 
@@ -33,7 +35,7 @@ const CardsContainer = ({
 
   return (
     <Container>
-      {showArrow && delay && <Arrow src={arrow} />}
+      {showArrow && delay && <Arrow src={arrow} side={side} />}
       <Trail>
         {yourCards.length > 0 &&
           yourCards.map((card, index) => {
@@ -46,8 +48,19 @@ const CardsContainer = ({
                   side={side}
                   picked={card.picked}
                   onClick={() => {
-                    if (showArrow) {
-                      updatePicked(index, side === "left" ? "player1" : "cpu");
+                    if (P2cpu) {
+                      showArrow &&
+                        card.player === "player1" &&
+                        updatePicked(
+                          index,
+                          side === "left" ? "player1" : "cpu"
+                        );
+                    } else {
+                      showArrow &&
+                        updatePicked(
+                          index,
+                          side === "left" ? "player1" : "cpu"
+                        );
                     }
                   }}
                   onMouseOver={() => setHoveredCard(card)}
@@ -143,11 +156,32 @@ const Count = styled(animated.h1)`
   z-index: 16;
 `;
 
-const Arrow = styled.img`
+const grow = keyframes`
+0%{
+    transform: scale(1) rotateZ(180deg)
+}
+50% {
+    transform: scale(1.1) rotateZ(180deg)
+}
+100% {
+    transform: scale(1) rotateZ(180deg)
+}
+`;
+
+type ArrowProps = {
+  side: string;
+};
+
+const Arrow = styled.img<ArrowProps>`
   height: 70px;
   width: 70px;
-  transform: rotateZ(180deg);
   margin-top: -150px;
   z-index: 20;
+  transform: ${({ side }) => side === "right" && "rotateZ(180deg)"};
   position: absolute;
+  animation: ${({ side }) =>
+    side === "left" &&
+    css`
+      ${grow} 1s linear infinite
+    `};
 `;

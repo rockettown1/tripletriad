@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { mainMusic, capture, cardSound, startSound } from "../utils";
+import { mainMusic } from "../utils";
 import styled from "styled-components";
 import Switch from "react-switch";
 
@@ -8,8 +7,11 @@ type PreferencesProps = {
   setPlayMusic: React.Dispatch<React.SetStateAction<boolean>>;
   playSounds: boolean;
   setPlaySounds: React.Dispatch<React.SetStateAction<boolean>>;
-  setOpponent: React.Dispatch<React.SetStateAction<string>>;
   show: React.Dispatch<React.SetStateAction<boolean>>;
+  P2human: boolean;
+  P2cpu: boolean;
+  setP2human: React.Dispatch<React.SetStateAction<boolean>>;
+  setP2cpu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Preferences = ({
@@ -17,12 +19,12 @@ const Preferences = ({
   setPlayMusic,
   playSounds,
   setPlaySounds,
-  setOpponent,
   show,
+  P2human,
+  P2cpu,
+  setP2human,
+  setP2cpu,
 }: PreferencesProps) => {
-  const [P2human, setP2human] = useState<boolean>(true);
-  const [P2cpu, setP2cpu] = useState<boolean>(false);
-
   const handleMusic = (nextChecked: boolean) => {
     setPlayMusic(nextChecked);
     if (nextChecked) {
@@ -41,12 +43,10 @@ const Preferences = ({
       case "human_local":
         setP2human(true);
         setP2cpu(false);
-        setOpponent("human");
         break;
       case "cpu":
         setP2human(false);
         setP2cpu(true);
-        setOpponent("cpu");
         break;
       default:
         console.log("how did you reach here?");

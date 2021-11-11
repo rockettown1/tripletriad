@@ -1,19 +1,13 @@
 import styled, { keyframes, css } from "styled-components";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { Card, removeCardAfterPlaying } from "../utils";
+import { Card, startingCards } from "../utils";
 import { images } from "../assets/images";
 import boardBackground from "../assets/images/other/card-board.png";
 import arrow from "../assets/images/other/triangle.png";
 import InfoPopup from "./InfoPopup";
 import { Status } from "../App";
-import {
-  checkStats,
-  winLogic,
-  WinLogic,
-  cardSound,
-  startSound,
-} from "../utils/";
+import { winLogic, WinLogic, startSound } from "../utils/";
 
 type Details = {
   winner: string | undefined;
@@ -21,50 +15,34 @@ type Details = {
 };
 
 type BoardProps = {
-  yourCards: Card[];
-  oppsCards: Card[];
-  setYourCards: React.Dispatch<React.SetStateAction<Card[]>>;
   setOppsCards: React.Dispatch<React.SetStateAction<Card[]>>;
-  currentCard: Card | null;
-  setCurrentCard: React.Dispatch<React.SetStateAction<Card | null>>;
   hoveredCard: Card | null;
   cardCount: (
     winLogic: WinLogic,
     board: (Card | null)[][]
   ) => { status: boolean; details: Details };
-  score: {
-    player: number;
-    opponent: number;
-  };
   playSounds: boolean;
   currentPlayer: string;
   setCurrentPlayer: React.Dispatch<React.SetStateAction<string>>;
   status: Status;
   setStatus: React.Dispatch<React.SetStateAction<Status | null>>;
+  board: (Card | null)[][];
+  setCellValue: (row: number, index: number, board: (Card | null)[][]) => void;
 };
 
 const Board = ({
-  yourCards,
-  oppsCards,
-  setYourCards,
   setOppsCards,
-  currentCard,
-  setCurrentCard,
   hoveredCard,
   cardCount,
-  score,
   playSounds,
   currentPlayer,
   setCurrentPlayer,
   status,
   setStatus,
+  board,
+  setCellValue,
 }: BoardProps) => {
   // prettier-ignore
-  const [board, setBoard] = useState<(Card | null)[][]>([
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-  ]);
 
   const [endGame, setEndGame] = useState<boolean>(false);
   const [finalMsg, setFinalMsg] = useState<string>("");
@@ -74,9 +52,7 @@ const Board = ({
 
   useEffect(() => {
     //selecting a player to go first
-    Math.random() < 0.5
-      ? setCurrentPlayer("player1")
-      : setCurrentPlayer("player2");
+    Math.random() > 0.5 && setCurrentPlayer("player2");
 
     if (playSounds) {
       startSound.play();
@@ -88,63 +64,28 @@ const Board = ({
   }, []);
 
   useEffect(() => {
-    const stateOfPlay = cardCount(winLogic, board);
-    setStatus(stateOfPlay);
-    setEndGame(stateOfPlay.status);
-    setFinalMsg(stateOfPlay.details.message);
+    if (!status?.status) {
+      const stateOfPlay = cardCount(winLogic, board);
+      setStatus(stateOfPlay);
+      setEndGame(stateOfPlay.status);
+      setFinalMsg(stateOfPlay.details.message);
+    }
   }, [board]);
 
   useEffect(() => {
     if (endGame) {
       setTimeout(() => {
         if (status?.details.winner) {
+          //if there's a winner
           navigate("/winner");
         } else {
+          //if draw
+          setOppsCards(startingCards(5));
           navigate("/select");
         }
       }, 5000);
     }
   }, [endGame]);
-
-  const setCellValue = (row: number, index: number) => {
-    if (currentCard !== null) {
-      const gameBoard = [...board];
-      if (gameBoard[row][index] === null) {
-        gameBoard[row][index] = currentCard;
-        setBoard(gameBoard);
-        if (playSounds) {
-          cardSound.play();
-        }
-        if (currentPlayer === "player1") {
-          setCurrentPlayer("player2");
-        } else {
-          setCurrentPlayer("player1");
-        }
-        //remove card from hand
-        removeCardAfterPlaying(
-          currentCard.player === "player1" ? yourCards : oppsCards,
-          currentCard,
-          currentCard.player === "player1" ? setYourCards : setOppsCards
-        );
-        setCurrentCard(null);
-
-        /* 
-        row rules:
-        first row (row 0) checks below (row 1)
-        second row checks above and below (row 0 and 2)
-        third row checks above (row 1)
-
-        column rules
-        first column checks right (index 1)
-        second column checks left and right (index 0 and 2)
-        third column checks left (index 1)
-        */
-
-        //value checks results handled here
-        checkStats(gameBoard, row, index, setBoard, playSounds);
-      }
-    }
-  };
 
   return (
     <Container>
@@ -171,7 +112,7 @@ export default Board;
 type RowProps = {
   board: (Card | null)[][];
   row: number;
-  setCellValue(row: number, index: number): void;
+  setCellValue(row: number, index: number, board: (Card | null)[][]): void;
   key: number;
 };
 
@@ -181,7 +122,8 @@ const Row = ({ board, row, setCellValue, key }: RowProps) => {
       {board.map((_, index) => {
         return (
           <Cell
-            onClick={() => setCellValue(row, index)}
+            key={index}
+            onClick={() => setCellValue(row, index, board)}
             flip={board[row][index]?.animate}
           >
             {board[row][index] && (

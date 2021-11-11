@@ -303,3 +303,64 @@ export const winLogic: WinLogic = (board, score, playMusic) => {
 
   return { status, details };
 };
+
+export const pickRandomIndex = (oppsCards: Card[]) => {
+  const cardsCopy = [...oppsCards];
+  const availableCards = cardsCopy.filter((card) => card.picked === false);
+  let rand = Math.floor(Math.random() * availableCards.length);
+
+  const indexOfPickedCard = cardsCopy.findIndex(
+    (card) => card.name === availableCards[rand].name
+  );
+  return indexOfPickedCard;
+};
+
+export const randomlyPickCell = (board: (Card | null)[][]) => {
+  let foundEmpty = false;
+  let rr = 0;
+  let rc = 0;
+  while (!foundEmpty) {
+    rr = Math.floor(Math.random() * 3);
+    rc = Math.floor(Math.random() * 3);
+    if (board[rr][rc] === null) {
+      foundEmpty = true;
+    }
+
+    //handle situation where p1 goes first
+    let countCells = 0;
+    for (const arr of board) {
+      for (const cell of arr) {
+        if (cell !== null) {
+          countCells += 1;
+        }
+      }
+    }
+    if (countCells === 9) {
+      foundEmpty = true;
+    }
+  }
+  return { rr, rc };
+};
+
+export function sleep(ms: number) {
+  var start = new Date().getTime(),
+    expire = start + ms;
+  while (new Date().getTime() < expire) {}
+  return;
+}
+
+export const isFull = (board: (Card | null)[][]): boolean => {
+  let countNulls = 0;
+  for (const row of board) {
+    for (const cell of row) {
+      if (cell === null) {
+        countNulls += 1;
+      }
+    }
+  }
+  if (countNulls === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};

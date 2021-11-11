@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
+import { useState } from "react";
+import styled from "styled-components";
 import { useSpring, animated, useChain, useSpringRef } from "react-spring";
 import FFVIII from "../assets/images/other/FFVIII_logo.png";
 import TT from "../assets/images/other/tripletriad.png";
-import { mainMusic } from "../utils";
 import { useNavigate } from "react-router-dom";
 import Preferences from "./Preferences";
 
@@ -12,7 +11,10 @@ type HomeProps = {
   setPlayMusic: React.Dispatch<React.SetStateAction<boolean>>;
   playSounds: boolean;
   setPlaySounds: React.Dispatch<React.SetStateAction<boolean>>;
-  setOpponent: React.Dispatch<React.SetStateAction<string>>;
+  P2human: boolean;
+  P2cpu: boolean;
+  setP2human: React.Dispatch<React.SetStateAction<boolean>>;
+  setP2cpu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Home = (props: HomeProps) => {
@@ -42,7 +44,16 @@ const Home = (props: HomeProps) => {
   let navigate = useNavigate();
   return (
     <div>
-      {showPreferences && <Preferences {...props} show={setShowPreferences} />}
+      {showPreferences && (
+        <Preferences
+          {...props}
+          show={setShowPreferences}
+          P2human={props.P2human}
+          setP2human={props.setP2human}
+          P2cpu={props.P2cpu}
+          setP2cpu={props.setP2cpu}
+        />
+      )}
 
       {!showPreferences && (
         <IntroContainer>

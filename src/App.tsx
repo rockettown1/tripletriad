@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./App.css";
 import Mute from "./components/Mute";
@@ -23,8 +23,10 @@ function App() {
   const [selection, setSelection] = useState<Card[]>([]);
   const [playMusic, setPlayMusic] = useState<boolean>(false);
   const [playSounds, setPlaySounds] = useState<boolean>(false);
-  const [opponent, setOpponent] = useState<string>("human");
   const [status, setStatus] = useState<Status | null>(null);
+  const [P2human, setP2human] = useState<boolean>(false);
+  const [P2cpu, setP2cpu] = useState<boolean>(true);
+
   let navigate = useNavigate();
   let { pathname } = useLocation();
   let { width } = useWindowSize();
@@ -48,8 +50,9 @@ function App() {
     //select 5 from starting 10
     const allCards = [...yourCards];
 
-    allCards[index].player = "player1";
+    //Note: there's currently a bug when trying to play more than 1 of the same card.
 
+    allCards[index].player = "player1";
     //resetting incase they've been animated in the past
     allCards[index].animate = false;
 
@@ -95,7 +98,10 @@ function App() {
               playMusic={playMusic}
               setPlaySounds={setPlaySounds}
               playSounds={playSounds}
-              setOpponent={setOpponent}
+              P2human={P2human}
+              setP2human={setP2human}
+              P2cpu={P2cpu}
+              setP2cpu={setP2cpu}
             />
           }
         />
@@ -109,6 +115,7 @@ function App() {
               selectPlayable={selectPlayable}
               selection={selection}
               setSelection={setSelection}
+              setStatus={setStatus}
             />
           }
         />
@@ -124,6 +131,7 @@ function App() {
               playSounds={playSounds}
               status={status}
               setStatus={setStatus}
+              P2cpu={P2cpu}
             />
           }
         />
@@ -137,6 +145,7 @@ function App() {
               setYourCards={setYourCards}
               setOppsCards={setOppsCards}
               status={status}
+              P2cpu={P2cpu}
             />
           }
         />

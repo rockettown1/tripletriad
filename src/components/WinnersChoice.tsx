@@ -12,6 +12,7 @@ type WCProps = {
   setYourCards: React.Dispatch<React.SetStateAction<Card[]>>;
   setOppsCards: React.Dispatch<React.SetStateAction<Card[]>>;
   allYourCards: Card[];
+  P2cpu: boolean;
 };
 
 const WinnersChoice = ({
@@ -21,6 +22,7 @@ const WinnersChoice = ({
   setOppsCards,
   oppsCards,
   allYourCards,
+  P2cpu,
 }: WCProps) => {
   const [choice, setChoice] = useState<{ card: Card; index: number } | null>(
     null
@@ -32,6 +34,23 @@ const WinnersChoice = ({
     card.animate = true;
     setChoice({ card, index });
   };
+
+  useEffect(() => {
+    //this handles cpu stealing a card
+    if (P2cpu) {
+      if (
+        status?.details.winner !== "player1" &&
+        status?.details.winner !== undefined
+      ) {
+        const temp1 = [...yourCards];
+        let index = Math.floor(Math.random() * 5);
+        let randCard = temp1[index];
+        takeCard(randCard, index);
+        const merge = [...new Set([...temp1, ...allYourCards])];
+        merge.splice(merge.indexOf(randCard), 1);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (choice) {
@@ -72,9 +91,10 @@ const WinnersChoice = ({
         <PlayerDeck>
           <h3>Please select a card from your opponent:</h3>
           {(status?.details.winner === "player1" ? oppsCards : yourCards).map(
-            (card, index, arr) => {
+            (card, index) => {
               return (
                 <CardImg
+                  key={index}
                   claim={card.animate}
                   id="loser"
                   player={
@@ -95,6 +115,7 @@ const WinnersChoice = ({
           ).map((card, index) => {
             return (
               <CardImg
+                key={index}
                 id="winner"
                 claim={false}
                 player={status?.details.winner}
