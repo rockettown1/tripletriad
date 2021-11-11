@@ -1,6 +1,6 @@
 # Triple Triad
 
-### (Card game from Final Fantasy 8)
+### (Card game from Final Fantasy 8) 🚀
 
 Just for fun weekend project (working but unfinished). Built quite quickly so expect a lot of refactoring required/making code DRYer.
 
@@ -35,7 +35,8 @@ If a player has less than 5 cards in their collection (the min number to play, t
 #### Known bugs/issues
 
 Due to browser security differences, Safari might have some issues with playing music.
-This app was just for fun/practice and HAS NOT been adequately tested in any way.
+This app was just for fun/practice and HAS NOT been adequately tested in any way.  
+There's a bug if you have two of the same card in your hand. Using one will manipulate the other. I'll fix it when I find time, just avoid doing that for now 😅
 
 ---
 
