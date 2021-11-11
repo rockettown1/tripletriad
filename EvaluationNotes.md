@@ -9,3 +9,4 @@ Plan: general advice suggests creating heuristic functions to play the game by u
 - (be aware of other sides): ie. if on the top row and **cell below is empty**, pick a card with a decent bottom stat
 - same as above for bottom row, left column and right column.
 - If you can't flip a card just play any
+- Unfinished document...
