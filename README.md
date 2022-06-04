@@ -4,7 +4,7 @@
 
 Just for fun weekend project (working but unfinished). Built quite quickly so expect a lot of refactoring required/making code DRYer.
 
-NOTE: This is just client-side code only (non of your data will be persisted, if you win cards for example) So refresh the page and all will be lost. I've still got to write the cpu algorithm so you'll have to also control the second player yourself if you want to have a mess around with it now.
+NOTE: This is just client-side code only (non of your data will be persisted, if you win cards for example) So refresh the page and all will be lost. The CPU algorithm is dumb, so I'll come back to this later.
 
 Also, if you're familiar with FF8 - it only has the basic Open rule as of yet.
 
